@@ -4,4 +4,7 @@ public class Advlogic {
 	/* Plans a head
 	 * can do basic 2d geometry
 	 */
+	public void hello() {
+		System.out.println("hello branch");
+	}
 }
