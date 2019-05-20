@@ -12,5 +12,9 @@ public class Advlogic {
 	}
 	public void branch2() {
 		System.out.println("hello branch 2 ");
+		
+	}
+	public void newCommit() {
+		return null ;
 	}
 }
