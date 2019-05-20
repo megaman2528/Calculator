@@ -3,42 +3,67 @@ package calculator;
 import java.util.Scanner;
 
 public class Calmain {
+	private static int option;
+	private static double fsnumber, scnumber;
 
 	public static void main(String[] args) {
-		Callogic callogic = new Callogic();
-		
-		System.out.println("welcome");
-		Scanner userinput = new Scanner(System.in);
-		System.out.println("Please Enter a number");
-		double userno = userinput.nextDouble();
-		System.out.println("please enter another number");
-		double userno2 = userinput.nextDouble();
-		System.out.println("please select the option\n"
-				+ "1 to add\n"
-				+ "2 to subtract\n"
-				+ "3 to mutiply\n"
-				+ "4 to divide\n");
-		int option = userinput.nextInt();
-		
-		switch(option) {
-		case 1:
-			System.out.println(callogic.add(userno,userno2));
-            
-            break;
-        case 2:
-        	System.out.println(callogic.subtract(userno,userno2));
-            break;
-        case 3:
-        	System.out.println(callogic.multiply(userno,userno2));
-            break;
-        case 4:
-        	System.out.println(callogic.divide(userno,userno2));
-            break;
-        default:
-        	System.out.println("invalid option try again");
-        	break;
+		Scanner RTF = new Scanner(System.in);
+		String run = "yes";
+		while (run.equals("yes")) {
+			Scanner userinput = new Scanner(System.in);
+			System.out.println("welcome");
+			System.out.println("Enter a number");
+			fsnumber = userinput.nextDouble();
+
+			System.out.println("Enter a number");
+			scnumber = userinput.nextDouble();
+
+			System.out.println("what operation you want to do\n" + "enter 1 to add\n" + "enter 2 to subtract\n"
+					+ "enter 3 to multiply\n" + "enter 4 to divide\n");
+
+			calmethod();
+			run = userinput.next().toLowerCase();
+			if (run.equals("yes")) {
+				continue;
+
+			} else {
+				System.out.println("Program closed");
+				break;
+			}
 		}
-		
+
+	}
+
+	public static void calmethod() {
+		Scanner useroption = new Scanner(System.in);
+		option = useroption.nextInt();
+		Callogic calogiCallogic = new Callogic();
+
+		switch (option) {
+		case 1:
+			System.out.println(calogiCallogic.add(fsnumber, scnumber));
+
+			break;
+
+		case 2:
+			System.out.println(calogiCallogic.subtract(fsnumber, scnumber));
+
+			break;
+		case 3:
+			System.out.println(calogiCallogic.multiply(fsnumber, scnumber));
+
+			break;
+		case 4:
+			System.out.println(calogiCallogic.divide(fsnumber, scnumber));
+
+			break;
+
+		default:
+			System.out.println("Invalid option");
+			break;
+		}
+		System.out.println("continue?");
+
 	}
 
 }
