@@ -15,6 +15,6 @@ public class Advlogic {
 		
 	}
 	public void newCommit() {
-		return null ;
+		return ;
 	}
 }
