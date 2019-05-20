@@ -23,13 +23,7 @@ public class Calmain {
 
 			calmethod();
 			run = userinput.next().toLowerCase();
-			if (run.equals("yes")) {
-				continue;
-
-			} else {
-				System.out.println("Program closed");
-				break;
-			}
+			System.out.println("program closed");
 		}
 
 	}
